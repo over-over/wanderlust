@@ -1,0 +1,42 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "ESNext",
+    "allowJs": true,
+    "allowUmdGlobalAccess": true,
+    "moduleResolution": "Bundler",
+    "lib": ["dom", "es5", "scripthost", "es2015.promise", "esnext", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./src/",
+    "outDir": "./build/",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "importHelpers": true,
+    "incremental": true,
+    "newLine": "LF",
+    "noEmit": true,
+    "noEmitOnError": true,
+    "noErrorTruncation": false,
+    "noImplicitOverride": true,
+    "removeComments": true,
+    "tsBuildInfoFile": "./buildcache",
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "plugins": [{ "name": "@astrojs/ts-plugin" }]
+  },
+  "include": ["src", "scripts", "./*", "./.eslintrc.cjs"],
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "./public/build/", "./build/"]
+  }
+}

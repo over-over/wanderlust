@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "wanderlust",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,11 +7,42 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky install",
+    "eslint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx,html}\" --fix",
+    "eslint:check": "eslint \"src/**/*.{js,ts,jsx,tsx,html}\"",
+    "scripts:convert": "tsx --tsconfig tsconfig.node.json ./scripts/convert-images.ts"
   },
   "dependencies": {
-    "astro": "^4.8.2",
     "@astrojs/check": "^0.6.0",
+    "@astrojs/react": "^3.3.4",
+    "@radix-ui/themes": "^3.0.3",
+    "astro": "^4.8.2",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.77.1",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@astrojs/ts-plugin": "^1.6.1",
+    "@prettier/plugin-xml": "^3.3.1",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "sharp": "^0.33.3",
+    "tsx": "^4.7.2"
   }
 }

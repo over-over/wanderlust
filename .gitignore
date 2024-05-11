@@ -22,3 +22,25 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# IDE leftovers
+.idea/
+*.iml
+.DS_Store
+node_modules/
+bower_components/
+*.egg-info
+*.egg
+*.pid
+.sass-cache/
+/.cache/
+/cache/
+Thumbs.db
+*.mo
+.coverage
+*.log
+.vscode/
+Session.vim
+yarn.lock
+.eslintcache
+.env
