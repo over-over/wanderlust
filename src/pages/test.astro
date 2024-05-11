@@ -1,0 +1,10 @@
+---
+import { Test as TestComponent } from 'components/test';
+import { TestCard } from 'components/test-card';
+import BasePageLayout from 'layouts/base-page-layout.astro';
+---
+
+<BasePageLayout title='Test'>
+  <TestComponent client:load />
+  <TestCard />
+</BasePageLayout>

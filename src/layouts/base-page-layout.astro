@@ -1,0 +1,41 @@
+---
+import '@radix-ui/themes/styles.css';
+import 'shared/theme/index.scss';
+import { Theme } from '@radix-ui/themes';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Open Graph /  -->
+    <meta property='og:locale' content='ru_RU' />
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={Astro.url} />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content='Продажа гайдов для путешествия' />
+    <meta property='og:site_name' content='Wanderlust' />
+  </head>
+  <body>
+    <Theme
+      appearance='light'
+      accentColor='teal'
+      grayColor='slate'
+      radius='large'
+      scaling='95%'
+    >
+      <slot />
+    </Theme>
+  </body>
+</html>
