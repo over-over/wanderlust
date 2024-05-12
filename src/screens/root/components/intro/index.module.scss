@@ -1,0 +1,46 @@
+.root {
+  position: relative;
+  padding: 120px 0;
+  background-color: var(--accent-a12);
+  background-image: url('./assets/jpg/bg.jpeg');
+  background-image: image-set(
+    url('./assets/avif/bg.avif') type('image/avif'),
+    url('./assets/webp/bg.webp') type('image/webp'),
+    url('./assets/jpg/bg.jpeg') type('image/jpeg')
+  );
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: var(--accent-a12);
+    opacity: 0.7;
+  }
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.title {
+  margin-bottom: 32px;
+  color: var(--accent-contrast);
+}
+.description {
+  margin: 0 auto 48px;
+  max-width: 670px;
+  color: var(--accent-contrast);
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+}
+.action {
+  width: 224px;
+}
