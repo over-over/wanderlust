@@ -3,5 +3,6 @@ module.exports = {
     require('autoprefixer'),
     require('cssnano'),
     require('postcss-flexbugs-fixes'),
+    require('postcss-logical'),
   ],
 };

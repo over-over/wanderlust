@@ -2,6 +2,7 @@
 import '@radix-ui/themes/styles.css';
 import 'shared/theme/index.scss';
 import { Theme } from '@radix-ui/themes';
+import Header from 'widgets/header';
 
 interface Props {
   title: string;
@@ -33,9 +34,12 @@ const { title } = Astro.props;
       accentColor='teal'
       grayColor='slate'
       radius='large'
-      scaling='95%'
+      scaling='100%'
     >
-      <slot />
+      <Header currentPath={Astro.url.pathname} />
+      <main>
+        <slot />
+      </main>
     </Theme>
   </body>
 </html>

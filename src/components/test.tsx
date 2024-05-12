@@ -1,30 +1,52 @@
-import { AlertDialog, Button, Flex } from '@radix-ui/themes';
+import { AlertDialog, Button, Flex, Inset, Table } from '@radix-ui/themes';
 
 export const Test = () => {
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger>
-        <Button>Revoke access</Button>
+        <Button color='red'>Delete users</Button>
       </AlertDialog.Trigger>
-      <AlertDialog.Content maxWidth='450px'>
-        <AlertDialog.Title>Revoke access</AlertDialog.Title>
+      <AlertDialog.Content maxWidth='500px'>
+        <AlertDialog.Title>Delete Users</AlertDialog.Title>
         <AlertDialog.Description size='2'>
-          Are you sure? This application will no longer be accessible and any
-          existing sessions will be expired.
+          Are you sure you want to delete these users? This action is permanent
+          and cannot be undone.
         </AlertDialog.Description>
 
-        <Flex gap='3' mt='4' justify='end'>
+        <Inset side='x' my='5'>
+          <Table.Root>
+            <Table.Header>
+              <Table.Row>
+                <Table.ColumnHeaderCell>Full name</Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell>Email</Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell>Group</Table.ColumnHeaderCell>
+              </Table.Row>
+            </Table.Header>
+
+            <Table.Body>
+              <Table.Row>
+                <Table.RowHeaderCell>Danilo Sousa</Table.RowHeaderCell>
+                <Table.Cell>danilo@example.com</Table.Cell>
+                <Table.Cell>Developer</Table.Cell>
+              </Table.Row>
+
+              <Table.Row>
+                <Table.RowHeaderCell>Zahra Ambessa</Table.RowHeaderCell>
+                <Table.Cell>zahra@example.com</Table.Cell>
+                <Table.Cell>Admin</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table.Root>
+        </Inset>
+
+        <Flex gap='3' justify='end'>
           <AlertDialog.Cancel>
             <Button variant='soft' color='gray'>
-              {' '}
-              Cancel{' '}
+              Cancel
             </Button>
           </AlertDialog.Cancel>
           <AlertDialog.Action>
-            <Button variant='solid' color='red'>
-              {' '}
-              Revoke access{' '}
-            </Button>
+            <Button color='red'>Delete users</Button>
           </AlertDialog.Action>
         </Flex>
       </AlertDialog.Content>
