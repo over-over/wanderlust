@@ -1,0 +1,18 @@
+.root {
+  padding: 120px 0;
+}
+.feature {
+  position: relative;
+  padding: 8px 8px 8px 90px;
+}
+.corner {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.counter {
+  position: absolute;
+  left: 24px;
+  top: 8px;
+  color: var(--accent-contrast);
+}
