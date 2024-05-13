@@ -1,0 +1,10 @@
+@mixin hidden-scrollbar {
+  @supports (scrollbar-width: none) {
+    scrollbar-width: none;
+  }
+  @supports selector(::-webkit-scrollbar) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

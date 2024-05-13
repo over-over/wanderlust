@@ -1,0 +1,25 @@
+@use 'src/shared/theme/scrollbar.scss';
+
+.root {
+  padding: 120px 0;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  padding: 0 24px;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 24px;
+
+  @include scrollbar.hidden-scrollbar;
+}
+.review {
+  scroll-snap-align: center;
+  --card-background-color: var(--accent-9);
+  padding: 24px;
+  min-width: calc(var(--container-4) / 3);
+}
+.text {
+  color: var(--accent-contrast);
+}
