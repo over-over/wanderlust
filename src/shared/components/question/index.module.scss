@@ -1,0 +1,28 @@
+.card {
+  padding: 16px 24px;
+}
+.details[open] {
+  & .minus {
+    display: block;
+  }
+  & .plus {
+    display: none;
+  }
+}
+.plus {
+  display: block;
+}
+.minus {
+  display: none;
+}
+.summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+.answer {
+  color: var(--gray-11);
+}

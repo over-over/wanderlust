@@ -64,7 +64,7 @@ export const Reviews = () => {
       </Container>
       <div className={styles.list}>
         {data.map((item) => (
-          <Card variant='classic' className={styles.review}>
+          <Card key={item.id} variant='classic' className={styles.review}>
             <Flex direction='column' gap='24px'>
               <Avatar
                 size='7'

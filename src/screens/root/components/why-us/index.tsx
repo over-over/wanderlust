@@ -69,7 +69,7 @@ export const WhyUs = () => {
         </Flex>
         <Grid rows='repeat(2, 1fr)' columns='repeat(3, 1fr)' gap='24px'>
           {features.map((item) => (
-            <Card variant='classic' className={styles.feature}>
+            <Card key={item.id} variant='classic' className={styles.feature}>
               <img className={styles.corner} {...cornerSvg} alt='Силуэт' />
               <Heading className={styles.counter} size='8' weight='bold'>
                 {item.id}
