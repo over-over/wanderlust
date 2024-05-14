@@ -3,3 +3,9 @@
   --heading-font-family: 'Montserrat', var(--system-ui-font);
   --cursor-button: pointer;
 }
+.rt-variant-ghost.rt-Button {
+  margin: 0;
+  height: var(--base-button-height);
+  padding-top: 0;
+  padding-bottom: 0;
+}
