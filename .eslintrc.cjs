@@ -168,6 +168,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
     quotes: [
       'error',
       'single',

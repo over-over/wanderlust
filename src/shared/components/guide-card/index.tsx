@@ -14,7 +14,7 @@ type Props = {
 
 export const GuideCard = ({ href, image, title, description }: Props) => {
   return (
-    <Card variant='classic' asChild className={styles.card}>
+    <Card variant='classic' asChild>
       <a href={href}>
         <Inset clip='padding-box' side='top' pb='0'>
           <picture className={styles.picture}>

@@ -1,0 +1,38 @@
+.root {
+  position: relative;
+  padding: 120px 0;
+}
+.graphic {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  left: calc(50% + 32px);
+  top: 0;
+  bottom: 0;
+}
+.graphicTop {
+  height: 256px;
+  background-size: 256px;
+  background-image: url('./assets/top.svg');
+}
+.graphicMain {
+  flex: 1;
+  background-size: 256px;
+  background-image: url('./assets/main.svg');
+}
+.formContent {
+  width: calc(50% - 12px);
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px 16px;
+}
+.textarea {
+  height: 108px;
+}
+.submit {
+  width: calc(50% - 8px);
+}
