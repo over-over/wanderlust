@@ -1,0 +1,28 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.separator {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 64px;
+  height: 12px;
+  background-color: var(--accent-9);
+}
+.preview {
+  flex: 1;
+  border-radius: 24px;
+  background-color: var(--accent-6);
+}
+.features {
+  flex: 2;
+}
+.cat {
+  position: absolute;
+  left: 386px;
+  z-index: 1;
+}

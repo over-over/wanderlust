@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.picture {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.image {
+  width: inherit;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.buy {
+  width: 180px;
+}
