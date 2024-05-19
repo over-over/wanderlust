@@ -2,6 +2,9 @@
 import BasePageLayout from 'layouts/base-page-layout.astro';
 import GuideIntro from 'screens/guide/components/guide-intro';
 import WhatsInside from 'screens/guide/components/whats-inside';
+import Maps from 'screens/guide/components/maps';
+import Examples from 'screens/guide/components/examples';
+import MayLike from 'screens/guide/components/may-like';
 import { assets } from 'screens/guides/components/popular-guides/assets';
 ---
 
@@ -34,6 +37,50 @@ import { assets } from 'screens/guides/components/popular-guides/assets';
         {
           title: 'Контент',
           info: 'Путешествуйте по уникальной Армении, земле древних монастырей, величественных гор и гостеприимных улыбок.',
+        },
+      ]}
+    />
+    <Maps
+      description='Путешествуйте по уникальной Армении, земле древних монастырей, величественных гор и гостеприимных улыбок. В нашем гайде вы найдете все необходимое для незабываемого приключения: от подробных описаний лучших туристических маршрутов до информации о скрытых жемчужинах. Запланируйте своё путешествие с нами и погрузитесь в культуру, кухню и историю одной из самых колоритных стран Кавказа.'
+      restarauntAmount={150}
+      shopAmount={90}
+      placeAmount={100}
+      routeAmount={50}
+    />
+    <Examples
+      description='Путешествуйте по уникальной Армении, земле древних монастырей, величественных гор и гостеприимных улыбок. В нашем гайде вы найдете все необходимое для незабываемого приключения: от подробных описаний лучших туристических маршрутов до информации о скрытых жемчужинах. Запланируйте своё путешествие с нами и погрузитесь в культуру, кухню и историю одной из самых колоритных стран Кавказа.'
+    />
+    <MayLike
+      data={[
+        {
+          href: 'guide/1',
+          title: 'Армения',
+          description: 'Продающий текст про путешествие в Белград',
+          image: {
+            jpeg: assets.jpg.armenia,
+            webp: assets.webp.armenia,
+            avif: assets.avif.armenia,
+          },
+        },
+        {
+          href: 'guide/2',
+          title: 'Армения',
+          description: 'Продающий текст про путешествие в Белград',
+          image: {
+            jpeg: assets.jpg.armenia,
+            webp: assets.webp.armenia,
+            avif: assets.avif.armenia,
+          },
+        },
+        {
+          href: 'guide/3',
+          title: 'Армения',
+          description: 'Продающий текст про путешествие в Белград',
+          image: {
+            jpeg: assets.jpg.armenia,
+            webp: assets.webp.armenia,
+            avif: assets.avif.armenia,
+          },
         },
       ]}
     />

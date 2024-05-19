@@ -1,0 +1,10 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.imageWrapper {
+  border-radius: 16px;
+  height: 256px;
+  background-color: var(--accent-5);
+}
