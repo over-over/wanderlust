@@ -40,7 +40,7 @@ const { title } = Astro.props;
       className='theme'
       panelBackground='solid'
     >
-      <Header currentPath={Astro.url.pathname} />
+      <Header currentPath={Astro.url.pathname} client:load />
       <main class='main'>
         <slot />
       </main>

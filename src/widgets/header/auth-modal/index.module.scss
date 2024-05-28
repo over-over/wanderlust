@@ -1,0 +1,14 @@
+.theme {
+  min-height: auto;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tabTrigger {
+  flex: 1;
+}
+.preWrap {
+  white-space: pre-wrap;
+}

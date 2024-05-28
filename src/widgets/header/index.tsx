@@ -1,4 +1,5 @@
 import { Button, Container, Link } from '@radix-ui/themes';
+import { AuthModal } from './auth-modal';
 import logoSvg from './assets/logo.svg';
 import styles from './index.module.scss';
 
@@ -32,6 +33,7 @@ const navItems: NavItem[] = [
 type Props = {
   currentPath: string;
 };
+
 export const Header = ({ currentPath }: Props) => {
   return (
     <header className={styles.root}>
@@ -62,14 +64,16 @@ export const Header = ({ currentPath }: Props) => {
             </ul>
           </nav>
           <div className={styles.actions}>
-            <Button
-              className={styles.button}
-              color='teal'
-              size='2'
-              variant='solid'
-            >
-              Войти
-            </Button>
+            <AuthModal>
+              <Button
+                className={styles.button}
+                color='teal'
+                size='2'
+                variant='solid'
+              >
+                Войти
+              </Button>
+            </AuthModal>
           </div>
         </div>
       </Container>
