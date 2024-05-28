@@ -1,7 +1,11 @@
 import { Button, Container, Link } from '@radix-ui/themes';
+import { getAuth } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { initializeApp } from 'firebase/app';
 import { AuthModal } from './auth-modal';
 import logoSvg from './assets/logo.svg';
 import styles from './index.module.scss';
+import { LogoutModal } from './logout-modal';
 
 type NavItem = {
   href: string;
@@ -35,6 +39,33 @@ type Props = {
 };
 
 export const Header = ({ currentPath }: Props) => {
+  const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    const firebaseConfig = {
+      apiKey: import.meta.env.PUBLIC_API_KEY,
+      authDomain: import.meta.env.PUBLIC_AUTH_DOMAIN,
+      projectId: import.meta.env.PUBLIC_PROJECT_ID,
+      storageBucket: import.meta.env.PUBLIC_STORAGE_BUCKET,
+      messagingSenderId: import.meta.env.PUBLIC_MESSAGING_SENDER_ID,
+      appId: import.meta.env.PUBLIC_APP_ID,
+    };
+
+    const app = initializeApp(firebaseConfig);
+
+    const firebaseAuth = getAuth(app);
+
+    const unsubscribe = firebaseAuth.onAuthStateChanged((user) => {
+      if (user?.email) {
+        setEmail(user.email);
+      } else {
+        setEmail('');
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <header className={styles.root}>
       <Container>
@@ -64,16 +95,29 @@ export const Header = ({ currentPath }: Props) => {
             </ul>
           </nav>
           <div className={styles.actions}>
-            <AuthModal>
-              <Button
-                className={styles.button}
-                color='teal'
-                size='2'
-                variant='solid'
-              >
-                Войти
-              </Button>
-            </AuthModal>
+            {email ? (
+              <LogoutModal>
+                <Button
+                  className={styles.button}
+                  color='teal'
+                  size='2'
+                  variant='solid'
+                >
+                  {email}
+                </Button>
+              </LogoutModal>
+            ) : (
+              <AuthModal>
+                <Button
+                  className={styles.button}
+                  color='teal'
+                  size='2'
+                  variant='solid'
+                >
+                  Войти
+                </Button>
+              </AuthModal>
+            )}
           </div>
         </div>
       </Container>
