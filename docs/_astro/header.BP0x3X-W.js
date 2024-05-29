@@ -7585,11 +7585,11 @@ const kc = ({ children: n }) => {
     });
   },
   Oc = [
-    { href: '/', label: 'Главная' },
-    { href: '/about', label: 'О нас' },
-    { href: '/guides', label: 'Гайды' },
-    { href: '/reviews', label: 'Отзывы' },
-    { href: '/contacts', label: 'Контакты' },
+    { href: '/wanderlust/', label: 'Главная' },
+    { href: '/wanderlust/about', label: 'О нас' },
+    { href: '/wanderlust/guides', label: 'Гайды' },
+    { href: '/wanderlust/reviews', label: 'Отзывы' },
+    { href: '/wanderlust/contacts', label: 'Контакты' },
   ],
   jc = ({ currentPath: n }) => {
     const [e, t] = u.useState('');

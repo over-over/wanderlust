@@ -31,7 +31,7 @@ export const GuideList = () => {
               justify='center'
             >
               <GuideCard
-                href='/guides/1'
+                href={`${import.meta.env.BASE_URL}/guides/1`}
                 image={{
                   jpeg: assets.jpg.armenia,
                   avif: assets.avif.armenia,
@@ -41,7 +41,7 @@ export const GuideList = () => {
                 description='Продающий текст про путешествие в Белград'
               />
               <GuideCard
-                href='/guides/1'
+                href={`${import.meta.env.BASE_URL}/guides/1`}
                 image={{
                   jpeg: assets.jpg.armenia,
                   avif: assets.avif.armenia,
@@ -51,7 +51,7 @@ export const GuideList = () => {
                 description='Продающий текст про путешествие в Белград'
               />
               <GuideCard
-                href='/guides/1'
+                href={`${import.meta.env.BASE_URL}/guides/1`}
                 image={{
                   jpeg: assets.jpg.armenia,
                   avif: assets.avif.armenia,
@@ -63,7 +63,7 @@ export const GuideList = () => {
             </Grid>
           </Flex>
           <Button asChild className={styles.button} size='4' variant='solid'>
-            <a href='/guides'>
+            <a href={`${import.meta.env.BASE_URL}/guides`}>
               Посмотреть все гайды
               <img {...eyesImage} alt='👀' />
             </a>

@@ -48,7 +48,7 @@ export const Intro = () => {
                 variant='solid'
                 size='4'
               >
-                <a href='/guides'>
+                <a href={`${import.meta.env.BASE_URL}/guides`}>
                   Список гайдов <ArrowRightIcon width={20} height={20} />
                 </a>
               </Button>
@@ -59,7 +59,7 @@ export const Intro = () => {
                 size='4'
                 color='gray'
               >
-                <a href='/about'>О нас</a>
+                <a href={`${import.meta.env.BASE_URL}/about`}>О нас</a>
               </Button>
             </div>
           </div>

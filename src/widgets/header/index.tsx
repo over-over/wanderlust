@@ -13,23 +13,23 @@ type NavItem = {
 };
 const navItems: NavItem[] = [
   {
-    href: '/',
+    href: `${import.meta.env.BASE_URL}/`,
     label: 'Главная',
   },
   {
-    href: '/about',
+    href: `${import.meta.env.BASE_URL}/about`,
     label: 'О нас',
   },
   {
-    href: '/guides',
+    href: `${import.meta.env.BASE_URL}/guides`,
     label: 'Гайды',
   },
   {
-    href: '/reviews',
+    href: `${import.meta.env.BASE_URL}/reviews`,
     label: 'Отзывы',
   },
   {
-    href: '/contacts',
+    href: `${import.meta.env.BASE_URL}/contacts`,
     label: 'Контакты',
   },
 ];
