@@ -75,9 +75,10 @@ export const Header = ({ currentPath }: Props) => {
             <ul className={styles.navList}>
               {navItems.map((item) => {
                 const isCurrent =
-                  currentPath === '/'
+                  currentPath === `${import.meta.env.BASE_URL}/`
                     ? currentPath === item.href
-                    : currentPath.startsWith(item.href) && item.href !== '/';
+                    : currentPath.startsWith(item.href) &&
+                      item.href !== `${import.meta.env.BASE_URL}/`;
                 return (
                   <li key={item.href}>
                     <Link

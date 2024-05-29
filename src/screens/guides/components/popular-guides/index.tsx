@@ -33,8 +33,8 @@ const data: Item[] = [...Array(9).keys()].map((index) => ({
   title: 'Армения',
   description: 'Продающий текст про путешествие в Армению',
   price: 599,
-  buyLink: `/buy/${index}`,
-  detailsLink: `/guides/${index}`,
+  buyLink: `${import.meta.env.BASE_URL}/buy/${index}`,
+  detailsLink: `${import.meta.env.BASE_URL}/guide`,
 }));
 
 export const PopularGuides = () => {
