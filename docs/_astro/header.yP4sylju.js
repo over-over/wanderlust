@@ -5,25 +5,25 @@ import {
   A as xr,
   B as Ur,
   s as Fr,
-  a as wn,
+  p as wn,
   C as jr,
   v as ie,
-  f as ke,
-  u as Br,
-  g as lt,
+  i as ke,
+  q as Br,
+  f as lt,
   y as F,
   $ as Rt,
-  k as dt,
+  a as dt,
   _ as x,
   c as Vr,
   b as be,
-  t as B,
+  w as B,
   D as Hr,
   E as Wr,
   F as zr,
-  j as d,
-  h as V,
-} from './flex.DIBXRVrM.js';
+  m as d,
+  n as V,
+} from './flex.C11PjoqR.js';
 import {
   $ as yn,
   d as En,
@@ -41,10 +41,10 @@ import {
   o as K,
   p as qr,
   m as Jr,
-} from './button.oVU9d7ON.js';
+} from './button.CYWjHZRM.js';
 import { r as u, $ as A } from './index.DFz9pK5G.js';
 import { s as ee, a as Yr, b as ue } from './about.63b7fff8.CdblSClp.js';
-import { n as Xr } from './container.DA3p9B4S.js';
+import { n as Xr } from './container.Bo2dAIJk.js';
 const Qr = ['div', 'span'],
   Zr = ['none', 'inline', 'inline-block', 'block'],
   es = {
@@ -7516,7 +7516,7 @@ const kc = ({ children: n }) => {
     });
   },
   Pc = {
-    src: '/_astro/logo.yj5y_18P.svg',
+    src: '/wanderlust/_astro/logo.yj5y_18P.svg',
     width: 173,
     height: 21,
     format: 'svg',

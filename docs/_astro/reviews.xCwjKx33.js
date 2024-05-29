@@ -1,7 +1,7 @@
 import {
   o as $,
   s as L,
-  a as R,
+  p as R,
   r as j,
   $ as z,
   b as p,
@@ -9,22 +9,22 @@ import {
   c as I,
   d as N,
   v as b,
-  y as f,
+  y as u,
   e as k,
-  f as v,
-  g as A,
-  u as M,
-  j as o,
-  h,
-  i as F,
-  t as m,
-} from './flex.DIBXRVrM.js';
-import { s as u } from './index.e3a5107b.5N7Nn848.js';
+  i as v,
+  f as A,
+  q as M,
+  m as o,
+  n as h,
+  t as F,
+  w as f,
+} from './flex.C11PjoqR.js';
+import { s as m } from './index.e3a5107b.5N7Nn848.js';
 import { r as a } from './index.DFz9pK5G.js';
-import { n as P } from './container.DA3p9B4S.js';
+import { n as P } from './container.Bo2dAIJk.js';
 const T = ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-  B = ['solid', 'soft'],
-  V = {
+  q = ['solid', 'soft'],
+  B = {
     ...$,
     size: {
       type: 'enum',
@@ -36,7 +36,7 @@ const T = ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
     variant: {
       type: 'enum',
       className: 'rt-variant',
-      values: B,
+      values: q,
       default: 'soft',
     },
     ...L,
@@ -44,14 +44,14 @@ const T = ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
     ...j,
     fallback: { type: 'ReactNode', required: !0 },
   },
-  q = ['1', '2', '3', '4', '5'],
+  V = ['1', '2', '3', '4', '5'],
   G = ['surface', 'classic', 'ghost'],
   K = {
     ...$,
     size: {
       type: 'enum',
       className: 'rt-r-size',
-      values: q,
+      values: V,
       default: '1',
       responsive: !0,
     },
@@ -84,9 +84,9 @@ const T = ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
 function O(e) {
   return e === 'initial' ? 'block' : e;
 }
-const y = 'Avatar',
-  [Q, le] = z(y),
-  [U, S] = Q(y),
+const w = 'Avatar',
+  [Q, le] = z(w),
+  [U, y] = Q(w),
   W = a.forwardRef((e, n) => {
     const { __scopeAvatar: s, ...t } = e,
       [r, c] = a.useState('idle');
@@ -104,7 +104,7 @@ const y = 'Avatar',
         onLoadingStatusChange: r = () => {},
         ...c
       } = e,
-      d = S(X, s),
+      d = y(X, s),
       i = ae(t),
       l = I((x) => {
         r(x), d.onImageLoadingStatusChange(x);
@@ -121,7 +121,7 @@ const y = 'Avatar',
   Z = 'AvatarFallback',
   ee = a.forwardRef((e, n) => {
     const { __scopeAvatar: s, delayMs: t, ...r } = e,
-      c = S(Z, s),
+      c = y(Z, s),
       [d, i] = a.useState(t === void 0);
     return (
       a.useEffect(() => {
@@ -164,7 +164,7 @@ function ae(e) {
 const te = W,
   se = Y,
   re = ee,
-  w = a.forwardRef((e, n) => {
+  S = a.forwardRef((e, n) => {
     const {
       asChild: s,
       children: t,
@@ -173,20 +173,20 @@ const te = W,
       color: d,
       radius: i,
       ...l
-    } = b(e, V, v);
+    } = b(e, B, v);
     return a.createElement(
       te,
       {
         'data-accent-color': d,
         'data-radius': i,
-        className: f('rt-reset', 'rt-AvatarRoot', r),
+        className: u('rt-reset', 'rt-AvatarRoot', r),
         style: c,
         asChild: s,
       },
       k({ asChild: s, children: t }, a.createElement(C, { ref: n, ...l })),
     );
   });
-w.displayName = 'Avatar';
+S.displayName = 'Avatar';
 const C = a.forwardRef(({ fallback: e, ...n }, s) => {
   const [t, r] = a.useState('idle');
   return a.createElement(
@@ -199,7 +199,7 @@ const C = a.forwardRef(({ fallback: e, ...n }, s) => {
       ? a.createElement(
           re,
           {
-            className: f('rt-AvatarFallback', {
+            className: u('rt-AvatarFallback', {
               'rt-one-letter': typeof e == 'string' && e.length === 1,
               'rt-two-letters': typeof e == 'string' && e.length === 2,
             }),
@@ -224,7 +224,7 @@ const E = a.forwardRef((e, n) => {
   return a.createElement(s ? A : 'div', {
     ref: n,
     ...r,
-    className: f('rt-reset', 'rt-BaseCard', 'rt-Card', t),
+    className: u('rt-reset', 'rt-BaseCard', 'rt-Card', t),
   });
 });
 E.displayName = 'Card';
@@ -233,7 +233,7 @@ const _ = a.forwardRef((e, n) => {
   return a.createElement(s ? A : 'section', {
     ...r,
     ref: n,
-    className: f('rt-Section', t),
+    className: u('rt-Section', t),
   });
 });
 _.displayName = 'Section';
@@ -269,9 +269,9 @@ const ne = [
       text: 'Наши гайды включают уникальные локации, которые вы не найдёте в обычных путеводителях',
     },
   ],
-  ue = () =>
+  me = () =>
     o.jsxs(_, {
-      className: u.root,
+      className: m.root,
       children: [
         o.jsx(P, {
           children: o.jsxs(h, {
@@ -285,7 +285,7 @@ const ne = [
                 align: 'center',
                 children: 'Отзывы на гайды',
               }),
-              o.jsx(m, {
+              o.jsx(f, {
                 size: '6',
                 weight: 'medium',
                 align: 'center',
@@ -295,31 +295,31 @@ const ne = [
           }),
         }),
         o.jsx('div', {
-          className: u.list,
+          className: m.list,
           children: ne.map((e) =>
             o.jsx(
               E,
               {
                 variant: 'classic',
-                className: u.review,
+                className: m.review,
                 children: o.jsxs(h, {
                   direction: 'column',
                   gap: '24px',
                   children: [
-                    o.jsx(w, {
+                    o.jsx(S, {
                       size: '7',
                       variant: 'soft',
                       fallback: e.initials,
                       src: 'https://i.pravatar.cc/300',
                     }),
-                    o.jsx(m, {
-                      className: u.text,
+                    o.jsx(f, {
+                      className: m.text,
                       size: '4',
                       weight: 'regular',
                       children: e.text,
                     }),
-                    o.jsx(m, {
-                      className: u.text,
+                    o.jsx(f, {
+                      className: m.text,
                       size: '4',
                       weight: 'medium',
                       children: e.name,
@@ -333,4 +333,4 @@ const ne = [
         }),
       ],
     });
-export { ue as default };
+export { me as default };

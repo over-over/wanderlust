@@ -2,25 +2,25 @@ import {
   o as ae,
   r as Ee,
   $ as xe,
-  k as _,
+  a as _,
   b as W,
   _ as v,
   c as R,
   d as ye,
-  l as Ce,
+  h as Ce,
   y as S,
-  m as Te,
+  l as Te,
   e as Re,
-  n as K,
+  g as K,
   v as D,
-  g as Pe,
-  f as ce,
-  p as Z,
-  q as Ae,
-  w as re,
-  j as m,
-  h as Ne,
-} from './flex.DIBXRVrM.js';
+  f as Pe,
+  i as ce,
+  j as Z,
+  u as Ae,
+  k as re,
+  m,
+  n as Ne,
+} from './flex.C11PjoqR.js';
 import { r } from './index.DFz9pK5G.js';
 import {
   $ as _e,
@@ -34,7 +34,7 @@ import {
   g as je,
   D as We,
   m as Me,
-} from './button.oVU9d7ON.js';
+} from './button.CYWjHZRM.js';
 const Ve = ['all', 'x', 'y', 'top', 'bottom', 'left', 'right'],
   Oe = ['border-box', 'padding-box'],
   C = ['current', '0'],
@@ -122,16 +122,16 @@ const Ye = ['1', '2', '3'],
     scrollbars: { type: 'enum', values: Ie, default: 'both' },
   };
 function Ue(e) {
-  const { m: o, mx: t, my: n, mt: l, mr: a, mb: c, ml: s, ...i } = e;
-  return { m: o, mx: t, my: n, mt: l, mr: a, mb: c, ml: s, rest: i };
+  const { m: o, mx: t, my: l, mt: n, mr: a, mb: c, ml: s, ...i } = e;
+  return { m: o, mx: t, my: l, mt: n, mr: a, mb: c, ml: s, rest: i };
 }
 function Be(e, [o, t]) {
   return Math.min(t, Math.max(o, e));
 }
 function Fe(e, o) {
-  return r.useReducer((t, n) => {
-    const l = o[t][n];
-    return l ?? t;
+  return r.useReducer((t, l) => {
+    const n = o[t][l];
+    return n ?? t;
   }, e);
 }
 const se = 'ScrollArea',
@@ -140,8 +140,8 @@ const se = 'ScrollArea',
   qe = r.forwardRef((e, o) => {
     const {
         __scopeScrollArea: t,
-        type: n = 'hover',
-        dir: l,
+        type: l = 'hover',
+        dir: n,
         scrollHideDelay: a = 600,
         ...c
       } = e,
@@ -155,12 +155,12 @@ const se = 'ScrollArea',
       [O, L] = r.useState(!1),
       [X, Y] = r.useState(!1),
       p = _(o, (A) => i(A)),
-      g = _e(l);
+      g = _e(n);
     return r.createElement(
       ke,
       {
         scope: t,
-        type: n,
+        type: l,
         dir: g,
         scrollHideDelay: a,
         scrollArea: s,
@@ -195,7 +195,7 @@ const se = 'ScrollArea',
   }),
   Ge = 'ScrollAreaViewport',
   Ze = r.forwardRef((e, o) => {
-    const { __scopeScrollArea: t, children: n, ...l } = e,
+    const { __scopeScrollArea: t, children: l, ...n } = e,
       a = w(Ge, t),
       c = r.useRef(null),
       s = _(o, c, a.onViewportChange);
@@ -210,7 +210,7 @@ const se = 'ScrollArea',
       }),
       r.createElement(
         W.div,
-        v({ 'data-radix-scroll-area-viewport': '' }, l, {
+        v({ 'data-radix-scroll-area-viewport': '' }, n, {
           ref: s,
           style: {
             overflowX: a.scrollbarXEnabled ? 'scroll' : 'hidden',
@@ -224,16 +224,16 @@ const se = 'ScrollArea',
             ref: a.onContentChange,
             style: { minWidth: '100%', display: 'table' },
           },
-          n,
+          l,
         ),
       ),
     );
   }),
   y = 'ScrollAreaScrollbar',
   Je = r.forwardRef((e, o) => {
-    const { forceMount: t, ...n } = e,
-      l = w(y, e.__scopeScrollArea),
-      { onScrollbarXEnabledChange: a, onScrollbarYEnabledChange: c } = l,
+    const { forceMount: t, ...l } = e,
+      n = w(y, e.__scopeScrollArea),
+      { onScrollbarXEnabledChange: a, onScrollbarYEnabledChange: c } = n,
       s = e.orientation === 'horizontal';
     return (
       r.useEffect(
@@ -245,31 +245,31 @@ const se = 'ScrollArea',
         ),
         [s, a, c],
       ),
-      l.type === 'hover'
-        ? r.createElement(Ke, v({}, n, { ref: o, forceMount: t }))
-        : l.type === 'scroll'
-          ? r.createElement(Qe, v({}, n, { ref: o, forceMount: t }))
-          : l.type === 'auto'
-            ? r.createElement(de, v({}, n, { ref: o, forceMount: t }))
-            : l.type === 'always'
-              ? r.createElement(te, v({}, n, { ref: o }))
+      n.type === 'hover'
+        ? r.createElement(Ke, v({}, l, { ref: o, forceMount: t }))
+        : n.type === 'scroll'
+          ? r.createElement(Qe, v({}, l, { ref: o, forceMount: t }))
+          : n.type === 'auto'
+            ? r.createElement(de, v({}, l, { ref: o, forceMount: t }))
+            : n.type === 'always'
+              ? r.createElement(te, v({}, l, { ref: o }))
               : null
     );
   }),
   Ke = r.forwardRef((e, o) => {
-    const { forceMount: t, ...n } = e,
-      l = w(y, e.__scopeScrollArea),
+    const { forceMount: t, ...l } = e,
+      n = w(y, e.__scopeScrollArea),
       [a, c] = r.useState(!1);
     return (
       r.useEffect(() => {
-        const s = l.scrollArea;
+        const s = n.scrollArea;
         let i = 0;
         if (s) {
           const u = () => {
               window.clearTimeout(i), c(!0);
             },
             d = () => {
-              i = window.setTimeout(() => c(!1), l.scrollHideDelay);
+              i = window.setTimeout(() => c(!1), n.scrollHideDelay);
             };
           return (
             s.addEventListener('pointerenter', u),
@@ -281,20 +281,20 @@ const se = 'ScrollArea',
             }
           );
         }
-      }, [l.scrollArea, l.scrollHideDelay]),
+      }, [n.scrollArea, n.scrollHideDelay]),
       r.createElement(
         F,
         { present: t || a },
         r.createElement(
           de,
-          v({ 'data-state': a ? 'visible' : 'hidden' }, n, { ref: o }),
+          v({ 'data-state': a ? 'visible' : 'hidden' }, l, { ref: o }),
         ),
       )
     );
   }),
   Qe = r.forwardRef((e, o) => {
-    const { forceMount: t, ...n } = e,
-      l = w(y, e.__scopeScrollArea),
+    const { forceMount: t, ...l } = e,
+      n = w(y, e.__scopeScrollArea),
       a = e.orientation === 'horizontal',
       c = q(() => i('SCROLL_END'), 100),
       [s, i] = Fe('hidden', {
@@ -310,12 +310,12 @@ const se = 'ScrollArea',
     return (
       r.useEffect(() => {
         if (s === 'idle') {
-          const u = window.setTimeout(() => i('HIDE'), l.scrollHideDelay);
+          const u = window.setTimeout(() => i('HIDE'), n.scrollHideDelay);
           return () => window.clearTimeout(u);
         }
-      }, [s, l.scrollHideDelay, i]),
+      }, [s, n.scrollHideDelay, i]),
       r.useEffect(() => {
-        const u = l.viewport,
+        const u = n.viewport,
           d = a ? 'scrollLeft' : 'scrollTop';
         if (u) {
           let f = u[d];
@@ -328,13 +328,13 @@ const se = 'ScrollArea',
             () => u.removeEventListener('scroll', b)
           );
         }
-      }, [l.viewport, a, i, c]),
+      }, [n.viewport, a, i, c]),
       r.createElement(
         F,
         { present: t || s !== 'hidden' },
         r.createElement(
           te,
-          v({ 'data-state': s === 'hidden' ? 'hidden' : 'visible' }, n, {
+          v({ 'data-state': s === 'hidden' ? 'hidden' : 'visible' }, l, {
             ref: o,
             onPointerEnter: P(e.onPointerEnter, () => i('POINTER_ENTER')),
             onPointerLeave: P(e.onPointerLeave, () => i('POINTER_LEAVE')),
@@ -345,7 +345,7 @@ const se = 'ScrollArea',
   }),
   de = r.forwardRef((e, o) => {
     const t = w(y, e.__scopeScrollArea),
-      { forceMount: n, ...l } = e,
+      { forceMount: l, ...n } = e,
       [a, c] = r.useState(!1),
       s = e.orientation === 'horizontal',
       i = q(() => {
@@ -360,17 +360,17 @@ const se = 'ScrollArea',
       N(t.content, i),
       r.createElement(
         F,
-        { present: n || a },
+        { present: l || a },
         r.createElement(
           te,
-          v({ 'data-state': a ? 'visible' : 'hidden' }, l, { ref: o }),
+          v({ 'data-state': a ? 'visible' : 'hidden' }, n, { ref: o }),
         ),
       )
     );
   }),
   te = r.forwardRef((e, o) => {
-    const { orientation: t = 'vertical', ...n } = e,
-      l = w(y, e.__scopeScrollArea),
+    const { orientation: t = 'vertical', ...l } = e,
+      n = w(y, e.__scopeScrollArea),
       a = r.useRef(null),
       c = r.useRef(0),
       [s, i] = r.useState({
@@ -380,7 +380,7 @@ const se = 'ScrollArea',
       }),
       u = me(s.viewport, s.content),
       d = {
-        ...n,
+        ...l,
         sizes: s,
         onSizesChange: i,
         hasThumb: u > 0 && u < 1,
@@ -397,17 +397,17 @@ const se = 'ScrollArea',
           v({}, d, {
             ref: o,
             onThumbPositionChange: () => {
-              if (l.viewport && a.current) {
-                const b = l.viewport.scrollLeft,
-                  h = oe(b, s, l.dir);
+              if (n.viewport && a.current) {
+                const b = n.viewport.scrollLeft,
+                  h = oe(b, s, n.dir);
                 a.current.style.transform = `translate3d(${h}px, 0, 0)`;
               }
             },
             onWheelScroll: (b) => {
-              l.viewport && (l.viewport.scrollLeft = b);
+              n.viewport && (n.viewport.scrollLeft = b);
             },
             onDragScroll: (b) => {
-              l.viewport && (l.viewport.scrollLeft = f(b, l.dir));
+              n.viewport && (n.viewport.scrollLeft = f(b, n.dir));
             },
           }),
         )
@@ -417,24 +417,24 @@ const se = 'ScrollArea',
             v({}, d, {
               ref: o,
               onThumbPositionChange: () => {
-                if (l.viewport && a.current) {
-                  const b = l.viewport.scrollTop,
+                if (n.viewport && a.current) {
+                  const b = n.viewport.scrollTop,
                     h = oe(b, s);
                   a.current.style.transform = `translate3d(0, ${h}px, 0)`;
                 }
               },
               onWheelScroll: (b) => {
-                l.viewport && (l.viewport.scrollTop = b);
+                n.viewport && (n.viewport.scrollTop = b);
               },
               onDragScroll: (b) => {
-                l.viewport && (l.viewport.scrollTop = f(b));
+                n.viewport && (n.viewport.scrollTop = f(b));
               },
             }),
           )
         : null;
   }),
   er = r.forwardRef((e, o) => {
-    const { sizes: t, onSizesChange: n, ...l } = e,
+    const { sizes: t, onSizesChange: l, ...n } = e,
       a = w(y, e.__scopeScrollArea),
       [c, s] = r.useState(),
       i = r.useRef(null),
@@ -445,7 +445,7 @@ const se = 'ScrollArea',
       }, [i]),
       r.createElement(
         be,
-        v({ 'data-orientation': 'horizontal' }, l, {
+        v({ 'data-orientation': 'horizontal' }, n, {
           ref: u,
           sizes: t,
           style: {
@@ -468,7 +468,7 @@ const se = 'ScrollArea',
             i.current &&
               a.viewport &&
               c &&
-              n({
+              l({
                 content: a.viewport.scrollWidth,
                 viewport: a.viewport.offsetWidth,
                 scrollbar: {
@@ -483,7 +483,7 @@ const se = 'ScrollArea',
     );
   }),
   rr = r.forwardRef((e, o) => {
-    const { sizes: t, onSizesChange: n, ...l } = e,
+    const { sizes: t, onSizesChange: l, ...n } = e,
       a = w(y, e.__scopeScrollArea),
       [c, s] = r.useState(),
       i = r.useRef(null),
@@ -494,7 +494,7 @@ const se = 'ScrollArea',
       }, [i]),
       r.createElement(
         be,
-        v({ 'data-orientation': 'vertical' }, l, {
+        v({ 'data-orientation': 'vertical' }, n, {
           ref: u,
           sizes: t,
           style: {
@@ -517,7 +517,7 @@ const se = 'ScrollArea',
             i.current &&
               a.viewport &&
               c &&
-              n({
+              l({
                 content: a.viewport.scrollHeight,
                 viewport: a.viewport.offsetHeight,
                 scrollbar: {
@@ -535,8 +535,8 @@ const se = 'ScrollArea',
   be = r.forwardRef((e, o) => {
     const {
         __scopeScrollArea: t,
-        sizes: n,
-        hasThumb: l,
+        sizes: l,
+        hasThumb: n,
         onThumbChange: a,
         onThumbPointerUp: c,
         onThumbPointerDown: s,
@@ -552,7 +552,7 @@ const se = 'ScrollArea',
       x = r.useRef(null),
       M = r.useRef(''),
       G = h.viewport,
-      V = n.content - n.viewport,
+      V = l.content - l.viewport,
       O = R(d),
       L = R(i),
       X = q(f, 10);
@@ -574,7 +574,7 @@ const se = 'ScrollArea',
           () => document.removeEventListener('wheel', p, { passive: !1 })
         );
       }, [G, $, V, O]),
-      r.useEffect(L, [n, L]),
+      r.useEffect(L, [l, L]),
       N($, X),
       N(h.content, X),
       r.createElement(
@@ -582,7 +582,7 @@ const se = 'ScrollArea',
         {
           scope: t,
           scrollbar: $,
-          hasThumb: l,
+          hasThumb: n,
           onThumbChange: R(a),
           onThumbPointerUp: R(c),
           onThumbPositionChange: L,
@@ -618,16 +618,16 @@ const se = 'ScrollArea',
   }),
   Q = 'ScrollAreaThumb',
   or = r.forwardRef((e, o) => {
-    const { forceMount: t, ...n } = e,
-      l = ue(Q, e.__scopeScrollArea);
+    const { forceMount: t, ...l } = e,
+      n = ue(Q, e.__scopeScrollArea);
     return r.createElement(
       F,
-      { present: t || l.hasThumb },
-      r.createElement(lr, v({ ref: o }, n)),
+      { present: t || n.hasThumb },
+      r.createElement(nr, v({ ref: o }, l)),
     );
   }),
-  lr = r.forwardRef((e, o) => {
-    const { __scopeScrollArea: t, style: n, ...l } = e,
+  nr = r.forwardRef((e, o) => {
+    const { __scopeScrollArea: t, style: l, ...n } = e,
       a = w(Q, t),
       c = ue(Q, t),
       { onThumbPositionChange: s } = c,
@@ -655,12 +655,12 @@ const se = 'ScrollArea',
       }, [a.viewport, d, s]),
       r.createElement(
         W.div,
-        v({ 'data-state': c.hasThumb ? 'visible' : 'hidden' }, l, {
+        v({ 'data-state': c.hasThumb ? 'visible' : 'hidden' }, n, {
           ref: i,
           style: {
             width: 'var(--radix-scroll-area-thumb-width)',
             height: 'var(--radix-scroll-area-thumb-height)',
-            ...n,
+            ...l,
           },
           onPointerDownCapture: P(e.onPointerDownCapture, (f) => {
             const h = f.target.getBoundingClientRect(),
@@ -674,47 +674,47 @@ const se = 'ScrollArea',
     );
   }),
   fe = 'ScrollAreaCorner',
-  nr = r.forwardRef((e, o) => {
+  lr = r.forwardRef((e, o) => {
     const t = w(fe, e.__scopeScrollArea),
-      n = !!(t.scrollbarX && t.scrollbarY);
-    return t.type !== 'scroll' && n
+      l = !!(t.scrollbarX && t.scrollbarY);
+    return t.type !== 'scroll' && l
       ? r.createElement(ar, v({}, e, { ref: o }))
       : null;
   }),
   ar = r.forwardRef((e, o) => {
-    const { __scopeScrollArea: t, ...n } = e,
-      l = w(fe, t),
+    const { __scopeScrollArea: t, ...l } = e,
+      n = w(fe, t),
       [a, c] = r.useState(0),
       [s, i] = r.useState(0),
       u = !!(a && s);
     return (
-      N(l.scrollbarX, () => {
+      N(n.scrollbarX, () => {
         var d;
         const f =
-          ((d = l.scrollbarX) === null || d === void 0
+          ((d = n.scrollbarX) === null || d === void 0
             ? void 0
             : d.offsetHeight) || 0;
-        l.onCornerHeightChange(f), i(f);
+        n.onCornerHeightChange(f), i(f);
       }),
-      N(l.scrollbarY, () => {
+      N(n.scrollbarY, () => {
         var d;
         const f =
-          ((d = l.scrollbarY) === null || d === void 0
+          ((d = n.scrollbarY) === null || d === void 0
             ? void 0
             : d.offsetWidth) || 0;
-        l.onCornerWidthChange(f), c(f);
+        n.onCornerWidthChange(f), c(f);
       }),
       u
         ? r.createElement(
             W.div,
-            v({}, n, {
+            v({}, l, {
               ref: o,
               style: {
                 width: a,
                 height: s,
                 position: 'absolute',
-                right: l.dir === 'ltr' ? 0 : void 0,
-                left: l.dir === 'rtl' ? 0 : void 0,
+                right: n.dir === 'ltr' ? 0 : void 0,
+                left: n.dir === 'rtl' ? 0 : void 0,
                 bottom: 0,
                 ...e.style,
               },
@@ -733,26 +733,26 @@ function me(e, o) {
 function k(e) {
   const o = me(e.viewport, e.content),
     t = e.scrollbar.paddingStart + e.scrollbar.paddingEnd,
-    n = (e.scrollbar.size - t) * o;
-  return Math.max(n, 18);
+    l = (e.scrollbar.size - t) * o;
+  return Math.max(l, 18);
 }
-function cr(e, o, t, n = 'ltr') {
-  const l = k(t),
-    a = l / 2,
+function cr(e, o, t, l = 'ltr') {
+  const n = k(t),
+    a = n / 2,
     c = o || a,
-    s = l - c,
+    s = n - c,
     i = t.scrollbar.paddingStart + c,
     u = t.scrollbar.size - t.scrollbar.paddingEnd - s,
     d = t.content - t.viewport,
-    f = n === 'ltr' ? [0, d] : [d * -1, 0];
+    f = l === 'ltr' ? [0, d] : [d * -1, 0];
   return he([i, u], f)(e);
 }
 function oe(e, o, t = 'ltr') {
-  const n = k(o),
-    l = o.scrollbar.paddingStart + o.scrollbar.paddingEnd,
-    a = o.scrollbar.size - l,
+  const l = k(o),
+    n = o.scrollbar.paddingStart + o.scrollbar.paddingEnd,
+    a = o.scrollbar.size - n,
     c = o.content - o.viewport,
-    s = a - n,
+    s = a - l,
     i = t === 'ltr' ? [0, c] : [c * -1, 0],
     u = Be(e, i);
   return he([0, c], [0, s])(u);
@@ -760,8 +760,8 @@ function oe(e, o, t = 'ltr') {
 function he(e, o) {
   return (t) => {
     if (e[0] === e[1] || o[0] === o[1]) return o[0];
-    const n = (o[1] - o[0]) / (e[1] - e[0]);
-    return o[0] + n * (t - e[0]);
+    const l = (o[1] - o[0]) / (e[1] - e[0]);
+    return o[0] + l * (t - e[0]);
   };
 }
 function pe(e, o) {
@@ -769,39 +769,39 @@ function pe(e, o) {
 }
 const sr = (e, o = () => {}) => {
   let t = { left: e.scrollLeft, top: e.scrollTop },
-    n = 0;
+    l = 0;
   return (
-    (function l() {
+    (function n() {
       const a = { left: e.scrollLeft, top: e.scrollTop },
         c = t.left !== a.left,
         s = t.top !== a.top;
-      (c || s) && o(), (t = a), (n = window.requestAnimationFrame(l));
+      (c || s) && o(), (t = a), (l = window.requestAnimationFrame(n));
     })(),
-    () => window.cancelAnimationFrame(n)
+    () => window.cancelAnimationFrame(l)
   );
 };
 function q(e, o) {
   const t = R(e),
-    n = r.useRef(0);
+    l = r.useRef(0);
   return (
-    r.useEffect(() => () => window.clearTimeout(n.current), []),
+    r.useEffect(() => () => window.clearTimeout(l.current), []),
     r.useCallback(() => {
-      window.clearTimeout(n.current), (n.current = window.setTimeout(t, o));
+      window.clearTimeout(l.current), (l.current = window.setTimeout(t, o));
     }, [t, o])
   );
 }
 function N(e, o) {
   const t = R(o);
   ye(() => {
-    let n = 0;
+    let l = 0;
     if (e) {
-      const l = new ResizeObserver(() => {
-        cancelAnimationFrame(n), (n = window.requestAnimationFrame(t));
+      const n = new ResizeObserver(() => {
+        cancelAnimationFrame(l), (l = window.requestAnimationFrame(t));
       });
       return (
-        l.observe(e),
+        n.observe(e),
         () => {
-          window.cancelAnimationFrame(n), l.unobserve(e);
+          window.cancelAnimationFrame(l), n.unobserve(e);
         }
       );
     }
@@ -809,12 +809,12 @@ function N(e, o) {
 }
 const ir = qe,
   dr = Ze,
-  le = Je,
-  ne = or,
-  ur = nr,
+  ne = Je,
+  le = or,
+  ur = lr,
   ve = r.forwardRef((e, o) => {
-    const { rest: t, ...n } = Ue(e),
-      [l, a] = Ce(n),
+    const { rest: t, ...l } = Ue(e),
+      [n, a] = Ce(l),
       {
         asChild: c,
         children: s,
@@ -833,7 +833,7 @@ const ir = qe,
       {
         type: d,
         scrollHideDelay: f,
-        className: S('rt-ScrollAreaRoot', l, i),
+        className: S('rt-ScrollAreaRoot', n, i),
         style: Te(a, u),
         asChild: c,
       },
@@ -851,7 +851,7 @@ const ir = qe,
           }),
           E !== 'vertical'
             ? r.createElement(
-                le,
+                ne,
                 {
                   'data-radius': $,
                   orientation: 'horizontal',
@@ -864,12 +864,12 @@ const ir = qe,
                     }),
                   ),
                 },
-                r.createElement(ne, { className: 'rt-ScrollAreaThumb' }),
+                r.createElement(le, { className: 'rt-ScrollAreaThumb' }),
               )
             : null,
           E !== 'horizontal'
             ? r.createElement(
-                le,
+                ne,
                 {
                   'data-radius': $,
                   orientation: 'vertical',
@@ -882,7 +882,7 @@ const ir = qe,
                     }),
                   ),
                 },
-                r.createElement(ne, { className: 'rt-ScrollAreaThumb' }),
+                r.createElement(le, { className: 'rt-ScrollAreaThumb' }),
               )
             : null,
           E === 'both'
@@ -894,17 +894,17 @@ const ir = qe,
   });
 ve.displayName = 'ScrollArea';
 const $e = r.forwardRef((e, o) => {
-  const { asChild: t, className: n, ...l } = D(e, Xe, ce);
+  const { asChild: t, className: l, ...n } = D(e, Xe, ce);
   return r.createElement(t ? Pe : 'div', {
-    ...l,
+    ...n,
     ref: o,
-    className: S('rt-Inset', n),
+    className: S('rt-Inset', l),
   });
 });
 $e.displayName = 'Inset';
 const Se = r.forwardRef((e, o) => {
-  const { layout: t, ...n } = Z,
-    { className: l, children: a, layout: c, ...s } = D(e, n, ce),
+  const { layout: t, ...l } = Z,
+    { className: n, children: a, layout: c, ...s } = D(e, l, ce),
     i = K({
       value: c,
       className: Z.layout.className,
@@ -912,7 +912,7 @@ const Se = r.forwardRef((e, o) => {
     });
   return r.createElement(
     'div',
-    { ref: o, className: S('rt-TableRoot', l), ...s },
+    { ref: o, className: S('rt-TableRoot', n), ...s },
     r.createElement(
       ve,
       null,
@@ -930,40 +930,40 @@ const ge = r.forwardRef(({ className: e, ...o }, t) =>
 );
 ge.displayName = 'Table.Body';
 const I = r.forwardRef((e, o) => {
-  const { className: t, ...n } = D(e, Ae);
+  const { className: t, ...l } = D(e, Ae);
   return r.createElement('tr', {
-    ...n,
+    ...l,
     ref: o,
     className: S('rt-TableRow', t),
   });
 });
 I.displayName = 'Table.Row';
 const j = r.forwardRef((e, o) => {
-  const { className: t, ...n } = D(e, re);
+  const { className: t, ...l } = D(e, re);
   return r.createElement('td', {
     className: S('rt-TableCell', t),
     ref: o,
-    ...n,
+    ...l,
   });
 });
 j.displayName = 'Table.Cell';
 const U = r.forwardRef((e, o) => {
-  const { className: t, ...n } = D(e, re);
+  const { className: t, ...l } = D(e, re);
   return r.createElement('th', {
     className: S('rt-TableCell', 'rt-TableColumnHeaderCell', t),
     scope: 'col',
     ref: o,
-    ...n,
+    ...l,
   });
 });
 U.displayName = 'Table.ColumnHeaderCell';
 const ee = r.forwardRef((e, o) => {
-  const { className: t, ...n } = D(e, re);
+  const { className: t, ...l } = D(e, re);
   return r.createElement('th', {
     className: S('rt-TableCell', 'rt-TableRowHeaderCell', t),
     scope: 'row',
     ref: o,
-    ...n,
+    ...l,
   });
 });
 ee.displayName = 'Table.RowHeaderCell';
